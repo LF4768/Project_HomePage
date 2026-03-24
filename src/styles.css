@@ -19,7 +19,7 @@ body {
 
 header {
     background-color: rgba(13, 56, 13, 0.881);
-    min-height: 600px;
+    min-height: 35rem;
     width:100%;
     display:flex;
     justify-content: center;
@@ -33,25 +33,38 @@ header {
 .header-content {
     position:relative;
     display: flex;
+    align-items: center;
     background-color: white;
     box-shadow: 1px 2px 20px 1px #0000006b;
     height: 400px;
     width:65%;
-    transform:rotate(10deg) translateY(160px) translateX(20px);
+    transform:rotate(10deg) translateY(240px) translateX(20px);
 }
 
-.header-content > div {
-    height: 100%;
-}
+
 
 
 .img-container{
-    width: 450px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    font-size: 60px;
+    color: white;
+    width: 500px;
+    height: 120%;
+    background-image: url("./img/pexels-chloekalaartist-1043473.jpg");
+    background-size: 500px 550px;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 1px 0px 19px 4px #000000a6;
 }
+
+
 
 .about-me {
     flex-grow:1;
     padding: 30px;
+    margin-top: -5rem;
 }
 
 .title {
@@ -59,6 +72,7 @@ header {
     font-weight:200;
     letter-spacing: -1px;
     word-spacing: 10px;
+    margin:0;
 }
 
 .about-detail {
@@ -89,12 +103,12 @@ main{
     width: 100%;
     min-height:800px;
     margin-top:10rem;
-    margin-left:15rem;
     padding:10px;
-    z-index: -1;
+    margin-left:10rem;
 }
 
 .work-title {
+    width: 85%;
     margin:0px;
     font-size: 50px;
     font-weight:400;
@@ -164,21 +178,19 @@ footer {
     width:100%;
     background-color: rgba(13, 56, 13, 0.881);
     display:flex;
+    gap: 5rem;
     justify-content: center;
     align-items: center;
+    padding:5rem
 }
 
-footer > div {
-    width:50%;
-    height: auto;
-}
 
 .contact-info {
     display:flex;
     flex-direction: column;
-    margin-top: -7rem;
-    margin-left:6.6rem;
-    padding-left:20px;
+    margin-top: -3rem;
+    padding-left:0;
+    margin-right:0;
 }
 
 .footer-icons {
@@ -236,4 +248,34 @@ footer > div {
     width:30px;
     left:0px;
     top:-5px;
+}
+
+
+.footer-img-container {
+    height: 35rem;
+    width:100%;
+    max-width: 30rem;
+}
+
+
+.footer-image {
+    height: 35rem;
+    width:600px;
+    max-width: 30rem;
+}
+
+@media ((max-width: 1140px)) {
+    .grid-container {
+        min-height: 80rem;
+        grid-template-columns: minmax(200px,1fr) minmax(200px,1fr);
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    footer {
+        gap: 2rem;
+    }
+
+    .footer-image {
+        width: 90%;
+    }
 }
